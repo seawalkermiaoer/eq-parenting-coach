@@ -83,8 +83,3 @@
 - **John Gottman** — 《Raising an Emotionally Intelligent Child》: 情绪教练五步法
 - **Adele Faber & Elaine Mazlish** — 《How to Talk So Kids Will Listen & Listen So Kids Will Talk》: 沟通话术工具
 - **BJ Fogg** — 《Tiny Habits》: 行为设计 B=MAP 模型、锚点、即时庆祝
-
-## 审计信息
-
-- 蒸馏时间: 2026-05-11
-- 验证通过: V1 pass / V2 pass / V3 pass
