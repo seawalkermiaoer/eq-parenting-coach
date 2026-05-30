@@ -273,24 +273,3 @@
 > "Celebrate immediately. The feeling of success wires in the habit."
 
 ---
-
-## 知识库评估
-
-### 结论：不需要独立知识库
-
-当前 **渐进式披露架构（SKILL.md → reference/* → books-reference.md）** 已经满足 agent 的所有检索需求。理由如下：
-
-| 考量维度 | 评估 |
-|----------|------|
-| **检索粒度** | `books-reference.md` 的"技能映射"字段精确指向每本书的知识落点。agent 读到某本书的摘要后，知道去哪个 reference 文件找深层细节。 |
-| **覆盖完整性** | 6 个 reference 文件已覆盖全部 10 本书的核心框架。`books-reference.md` 补充了每本书的"为什么"（核心命题）和"怎么映射"（技能映射）。没有知识盲区。 |
-| **维护成本** | 独立知识库意味着双写（每次更新 reference 还得同步更新知识库），引入不一致风险。当前架构下，每本书只有一个"真相来源"：reference 文件。 |
-| **Agent 认知负荷** | SKILL.md（188 行）→ reference（6 文件共 ~600 行）→ books-reference（~200 行）。总计 ~1000 行，已在 agent 舒适区内。再加知识库反而稀释核心指令。 |
-| **使用场景** | 用户问"Gottman 的情绪教练五步是什么"时，agent 可以直接从 `reference/emotion-coaching.md` 提取，不需要翻知识库。books-reference 用于"需要引用出处"或"理解框架渊源"的场景。 |
-
-### 推荐替代方案
-
-如果需要更强的"书籍内容可检索性"，建议：
-1. **在各自 reference 文件中显式标注出处**（已做：每个 reference 文件头部已有"参考 XXX 书"声明）
-2. **在 books-reference.md 中保持技能映射字段**（已做）
-3. **如果未来引入新书**，遵循同一模板（核心命题 → 关键框架 → 可用工具 → 技能映射 → 代表性原文）扩充 books-reference.md
